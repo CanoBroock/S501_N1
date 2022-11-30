@@ -5,8 +5,8 @@ import cat.itacademy.barcelonactiva.canobroock.cesar.s05.t01.n01.model.domain.Su
 import java.util.List;
 
 public interface SucursalService {
-    List<Sucursal> getAllSucursales();
-    void saveSucursal(Sucursal sucursal);
-    Sucursal getSucursalById(long id);
-    void deleteSucursalById(long id);
+    public List<Sucursal> getAllSucursales();
+    public void saveSucursal(Sucursal sucursal);
+    public Sucursal getSucursalById(long id);
+    public void deleteSucursalById(long id);
 }
