@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class SucursalDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    //private static final long serialVersionUID = 1L;
 
     private List<String> paisesUE = Stream.of("Alemania", "Belgica", "Croacia", "España", "Francia", "Irlanda",
             "Letonia", "Luxemburgo", "Paises Bajos", "Suecia", "Bulgaria", "Eslovaquia", "Estonia", "Grecia", "Malta",
@@ -70,4 +70,22 @@ public class SucursalDTO implements Serializable {
                 ", tipusSucursal='" + tipusSucursal + '\'' +
                 '}';
     }
+
+    public String tiposSucursal(String paisSucursal) {
+        boolean controlador;
+        int i = 0;
+
+        while (paisesUE.size() && controlador) {
+            if (paisSucursal.equalsIgnoreCase(paisesUE.get(i))) {
+                tipusSucursal = "UE";
+                controlador = true;
+            }
+            i++;
+        }
+        if (!controlador) {
+            tipusSucursal = "Fora UE";
+        }
+        return tipusSucursal;
+    }
+
 }
