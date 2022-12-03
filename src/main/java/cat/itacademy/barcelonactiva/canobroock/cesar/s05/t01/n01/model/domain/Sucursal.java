@@ -1,6 +1,15 @@
 package cat.itacademy.barcelonactiva.canobroock.cesar.s05.t01.n01.model.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 
 @Entity
 @Table(name = "sucursales")
@@ -16,22 +25,4 @@ public class Sucursal {
     @Column(name = "pais_sucursal")
     private String paisSucursal;
 
-    public long getPk_SucursalID() {
-        return pk_SucursalID;
-    }
-    public void setPk_SucursalID(long pk_SucursalID) {
-        this.pk_SucursalID = pk_SucursalID;
-    }
-    public String getNomSucursal() {
-        return nomSucursal;
-    }
-    public void setNomSucursal(String nomSucursal) {
-        this.nomSucursal = nomSucursal;
-    }
-    public String getPaisSucursal() {
-        return paisSucursal;
-    }
-    public void setPaisSucursal(String paisSucursal) {
-        this.paisSucursal = paisSucursal;
-    }
 }
