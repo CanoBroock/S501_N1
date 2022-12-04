@@ -22,6 +22,7 @@
         <tr>
             <th>Sucursal name</th>
             <th>Sucursal country</th>
+            <th>Sucursal type</th>
             <th> Actions</th>
         </tr>
         </thead>
@@ -29,6 +30,7 @@
         <tr th:each="sucursal : ${listSucursales}">
             <td th:text="${sucursal.nomSucursal}"></td>
             <td th:text="${sucursal.paisSucursal}"></td>
+            <td th:text="${sucursal.tipoSucursal}"></td>
             <td><a th:href="@{/getOne/{id}(id=${sucursal.pk_SucursalID})}" class="btn btn-primary">Update</a>
                 <a th:href="@{/delete/{id}(id=${sucursal.pk_SucursalID})}" class="btn btn-danger">Delete</a>
             </td>

@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Data
 public class SucursalDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -25,14 +26,12 @@ public class SucursalDTO implements Serializable {
     private String paisSucursal;
     private String tipoSucursal;
 
-    public SucursalDTO(int pk_SucursalID, String nomSucursal, String paisSucursal, String tipoSucursal) {
-        this.pk_SucursalID = pk_SucursalID;
-        this.nomSucursal = nomSucursal;
+    public void setPaisSucursal(String paisSucursal) {
         this.paisSucursal = paisSucursal;
-        this.tipoSucursal = tipoSucursal(paisSucursal);
+        sucursalUE();
     }
 
-    public String tipoSucursal(String paisSucursal) {
+    public void sucursalUE() {
         boolean controlador = false;
         int i = 0;
 
@@ -46,7 +45,7 @@ public class SucursalDTO implements Serializable {
         if (controlador == false) {
             tipoSucursal = "Fuera de la UE";
         }
-        return tipoSucursal;
+        setTipoSucursal(tipoSucursal);
     }
 
 }
