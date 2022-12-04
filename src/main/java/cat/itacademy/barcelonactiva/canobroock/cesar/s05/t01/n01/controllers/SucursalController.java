@@ -25,16 +25,16 @@ public class SucursalController {
         return "index";
     }
 
-    @GetMapping("/getAll")
-    public String getAll(Model model) {
+    @GetMapping("/add")
+    public String add(Model model) {
         // create model attribute to bind form data
         Sucursal sucursal = new Sucursal();
         model.addAttribute("sucursal", sucursal);
         return "new_sucursal";
     }
 
-    @PostMapping("/add")
-    public String add(@ModelAttribute("sucursal") Sucursal sucursal) {
+    @PostMapping("/save")
+    public String save(@ModelAttribute("sucursal") Sucursal sucursal) {
         // save sucursal to database
         sucursalService.saveSucursal(sucursal);
         return "redirect:/";

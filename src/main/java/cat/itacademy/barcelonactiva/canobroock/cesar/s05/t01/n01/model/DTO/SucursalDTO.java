@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString

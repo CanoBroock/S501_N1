@@ -14,7 +14,7 @@
     <hr>
     <h2>Save Sucursal</h2>
 
-    <form action="#" th:action="@{/add}" th:object="${sucursal}" method="POST">
+    <form action="#" th:action="@{/save}" th:object="${sucursal}" method="POST">
         <input type="text" th:field="*{nomSucursal}" placeholder="Sucursal name" class="form-control mb-4 col-4">
 
         <input type="text" th:field="*{paisSucursal}" placeholder="Sucursal country" class="form-control mb-4 col-4">

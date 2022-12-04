@@ -1,12 +1,10 @@
 package cat.itacademy.barcelonactiva.canobroock.cesar.s05.t01.n01.model.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
