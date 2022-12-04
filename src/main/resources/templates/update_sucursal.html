@@ -15,7 +15,7 @@
     <hr>
     <h2>Update Sucursal</h2>
 
-    <form action="#" th:action="@{/add}" th:object="${sucursal}" method="POST">
+    <form action="#" th:action="@{/save}" th:object="${sucursal}" method="POST">
 
         <!-- Add hidden form field to handle update -->
         <input type="hidden" th:field="*{pk_SucursalID}"/>
